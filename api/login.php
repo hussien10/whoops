@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") :
     // validate the inputs
     $email = trim(htmlspecialchars($_POST['email']));
     $password = $_POST['password'];
+    $errors=[];
     // valdiate the email
     if (empty($email)) :
         $errors[] ="email is rquired";

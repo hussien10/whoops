@@ -12,11 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") :
     $errors=[];
     // valdiate the password
     if (empty($passwithouthashing)) :
-        echo $passwithouthashing;
         $errors[] = "password is rquired";
     elseif (!is_string($password)) :
         $errors[] ="password must be string";
-    elseif (strlen($password) > 100) :
+    elseif (strlen($passwithouthashing) > 100) :
         $errors[] ="password must be less than 100 charcters";
     endif;
     
